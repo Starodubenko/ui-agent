@@ -1,0 +1,44 @@
+type User {
+  id: ID!
+  email: String!
+  createdAt: String!
+  components: [Component!]!
+}
+
+type Component {
+  id: ID!
+  owner: User!
+  name: String!
+  createdAt: String!
+  versions: [ComponentVersion!]!
+}
+
+type ComponentVersion {
+  id: ID!
+  component: Component!
+  code: String!
+  meta: JSON!
+  createdAt: String!
+  tests: [Test!]!
+}
+
+type Test {
+  id: ID!
+  componentVersion: ComponentVersion!
+  code: String!
+  createdAt: String!
+}
+
+type Query {
+  me: User
+  getComponent(id: ID!): Component
+  getComponents: [Component!]!
+}
+
+type Mutation {
+  register(email: String!, password: String!): AuthPayload!
+  login(email: String!, password: String!): AuthPayload!
+  createComponent(name: String!): Component!
+  createComponentVersion(componentId: ID!, code: String!, meta: JSON): ComponentVersion!
+  createTest(componentVersionId: ID!, code: String!): Test!
+}

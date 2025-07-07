@@ -16,6 +16,20 @@
     "forceConsistentCasingInFileNames": true,
     "noImplicitAny": false,
     "strictBindCallApply": false,
-    "noFallthroughCasesInSwitch": false
+    "noFallthroughCasesInSwitch": false,
+    "paths": {
+      "@shared/*": ["src/shared/*"],
+      "@config/*": ["src/config/*"],
+      "@main/*": ["src/main/*"],
+      "@prisma/*": ["src/modules/prisma/*"],
+      "@user/*": ["src/modules/user/*"],
+      "@auth/*": ["src/modules/auth/*"],
+      "@component/*": ["src/modules/component/*"],
+      "@version/*": ["src/modules/version/*"],
+      "@figma/*": ["src/modules/figma/*"],
+      "@openai/*": ["src/modules/openai/*"],
+      "@test/*": ["src/modules/test/*"],
+      "@prompt/*": ["src/modules/prompt/*"],
+    }
   }
 }

@@ -7,24 +7,32 @@
     "dev": "vite",
     "build": "tsc -b && vite build",
     "lint": "eslint .",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "codegen": "graphql-codegen --config src/codegen.ts"
   },
   "dependencies": {
+    "@apollo/client": "^3.13.8",
+    "@codesandbox/sandpack-react": "^2.20.0",
     "@emotion/react": "^11",
     "@emotion/styled": "^11",
     "@mui/icons-material": "^7",
     "@mui/material": "^7",
     "ace-builds": "^1.30.0",
     "axios": "^1.6.0",
+    "graphql": "^16.11.0",
     "react": "^19.1.0",
     "react-ace": "^14.0.1",
     "react-dom": "^19.1.0",
     "react-live": "^4.1.8",
-    "react-router-dom": "^7.6.2",
+    "react-router-dom": "^7.6.3",
     "zustand": "^5.0.5"
   },
   "devDependencies": {
     "@eslint/js": "^9.25.0",
+    "@graphql-codegen/cli": "^5.0.7",
+    "@graphql-codegen/typescript": "^4.1.6",
+    "@graphql-codegen/typescript-operations": "^4.6.1",
+    "@graphql-codegen/typescript-react-apollo": "^4.3.3",
     "@types/react": "^19.1.2",
     "@types/react-dom": "^19.1.2",
     "@vitejs/plugin-react": "^4.4.1",
@@ -34,6 +42,7 @@
     "globals": "^16.0.0",
     "typescript": "~5.8.3",
     "typescript-eslint": "^8.30.1",
-    "vite": "^6.3.5"
+    "vite": "^6.3.5",
+    "vite-tsconfig-paths": "^5.1.4"
   }
 }
